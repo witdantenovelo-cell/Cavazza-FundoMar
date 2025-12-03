@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zonas do Oceano — Curiosidades do Fundo do Mar</title>
+  <link rel="stylesheet" href="style.css">
+    <!-- Bibliotecas -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.8.0/dist/tf.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="mark">ZO</div>
+      <div>
+        <h1>Zonas do Oceano</h1>
+        <p class="lead">Explore as profundezas do mar — da luz à escuridão</p>
+      </div>
+    </div>
+    <nav>
+      <button class="btn" id="abrirIA">IA de reconhecimento</button>
+      <button class="btn" id="btnAbrirChatbot">Chat-bot</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h2>Descubra as Zonas do Oceano</h2>
+        <p>Viaje pelas profundezas do oceano, conhecendo os animais, mistérios e estudos de cada camada. Cada rolagem é uma imersão na escuridão misteriosa das profundezas.</p>
+      </div>
+      <img src="static/20251104_1017_Superfície do Oceano_simple_compose_01k97g5ag2ejr80bhk6fq5tzzt.png" alt="Superfície do oceano">
+    </section>
+
+    <section class="zone" id="epipelagic">
+      <h3>Zona Epipelágica — Superfície do mar (0–200 m)</h3>
+      <div class="grid">
+        <div>
+          <p>Essa é a região mais próxima da superfície, onde a luz solar penetra intensamente. É rica em biodiversidade, com corais, golfinhos, tartarugas e peixes coloridos.</p>
+          <ul class="specs">
+            <li>Grande abundância de oxigênio e fitoplâncton.</li>
+            <li>Altas temperaturas e forte interação ecológica.</li>
+          </ul>
+        </div>
+        <div>
+          <img src="static/20251104_1021_Vida Marinha Oceânica_simple_compose_01k97gbgxaem4v8acnd4df0ma1.png" alt="Vida na superfície">
+          <img src="static/20251104_1024_Golfinho Realista_simple_compose_01k97gjbpsekfa6755t8fschkv.png" alt="Golfinhos">
+        </div>
+      </div>
+    </section>
+
+    <section class="zone" id="mesopelagic">
+      <h3>Zona Mesopelágica — O Crepúsculo (200–1000 m)</h3>
+      <div class="grid">
+        <div>
+          <p>Peixes-lanterna, lulas e tubarões pequenos vivem nesta zona. Adaptaram-se à penumbra e usam luz própria para atrair presas ou parceiros.</p>
+        </div>
+        <div>
+          <img src="static/20251104_1028_Peixe Lanterna Realista_simple_compose_01k97grfxpf0gvv9dej65pwtfs.png" alt="Peixe-lanterna">
+          <img src="static/20251104_1031_Lulas no Escuro_simple_compose_01k97gygh9f3ermf5jvbwrgd7y.png" alt="Lulas no escuro">
+        </div>
+      </div>
+    </section>
+
+    <section class="zone" id="bathypelagic">
+      <h3>Zona Batipelágica — A Escuridão Total (1000–4000 m)</h3>
+      <div class="grid">
+        <div>
+          <p>Com ausência de luz solar, apenas os organismos bioluminescentes brilham. A pressão é extrema e o frio constante.</p>
+        </div>
+        <div>
+          <img src="static/20251111_0953_Peixe Blobfish Realista_simple_compose_01k9sfhppcf818vb57v86bnf0b.png" alt="Peixe abissal">
+          <img src="static/20251111_0955_Peixes do Abismo Oceânico_simple_compose_01k9sfncwbe4hswt4asv9e2zfr.png" alt="Vida profunda">
+        </div>
+      </div>
+    </section>
+
+    <section class="zone" id="abyssopelagic">
+      <h3>Zona Abissal — As Planícies do Fundo (4000–6000 m)</h3>
+      <div class="grid">
+        <div>
+          <p>Fria, escura e silenciosa, esta é uma das regiões mais misteriosas. Criaturas lentas e resistentes sobrevivem de restos orgânicos que caem das camadas superiores.</p>
+        </div>
+        <div>
+          <img src="static/20251111_0959_Abismo Marinho Realista_simple_compose_01k9sfxqwwfe4bratp06sqr2hg.png" alt="Abismo marinho">
+          <img src="static/20251111_1008_Tubarão-Víbora Realístico_simple_compose_01k9sgdd97epzsvm38yzqdrn5r.png" alt="Vida no abismo">
+        </div>
+      </div>
+    </section>
+
+    <section class="zone" id="hadal">
+      <h3>Zona Hadal — As Fendas Oceânicas (>6000 m)</h3>
+      <div class="grid">
+        <div>
+          <p>Os fossos oceânicos são o ponto mais profundo do planeta. Quase nenhuma luz chega aqui, e a vida é escassa, mas fascinante: anfípodes gigantes e microrganismos resistentes.</p>
+        </div>
+        <div>
+          <img src="static/7d3a9de9-109c-4b46-9ae9-0eae015facdf.png" alt="Fosso oceânico">
+          <img src="static/images (9).jpeg" alt="Profundezas extremas">
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <small>Feito com ❤️ para os curiosos do oceano — mergulhe no conhecimento das profundezas.</small>
+    </footer>
+  </main>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Robert"
+  agent-id="d396cafd-0d12-4f5a-bed2-ddbb355260d5"
+  language-code="pt-br"
+></df-messenger>
+
+      <!-- Modal da câmera (inicialmente escondido) -->
+  <div id="cameraModal" class="modal" aria-hidden="true" style="display:none;">
+    <div class="modal-content">
+      <button id="fecharModal" class="botao-fechar" title="Fechar">❌</button>
+      <h2 class="modal-title">Reconhecimento Facial</h2>
+      <div class="video-wrap">
+        <video id="video" autoplay muted playsinline></video>
+      </div>
+      <div class="controls">
+        <button id="tirarFoto" class="botao-foto" title="Tirar foto">📸</button>
+      </div>
+      <p id="modalStatus" class="modal-status">Aguardando...</p>
+      <canvas id="fotoCanvas" style="display:none;"></canvas>
+    </div>
+  </div>
+
+  <!-- Peixes animados -->
+  <div class="fish" style="top:20%;animation-delay:0s"><img src="static/3ab9a5c0-3794-4df2-8791-d5bb9c7bb5fa.png" alt="Peixe"></div>
+  <div class="fish" style="top:40%;animation-delay:5s"><img src="static/3ab9a5c0-3794-4df2-8791-d5bb9c7bb5fa.png" alt="Peixe"></div>
+  <div class="fish" style="top:60%;animation-delay:10s"><img src="static/3ab9a5c0-3794-4df2-8791-d5bb9c7bb5fa.png" alt="Peixe"></div>
+  <div class="fish" style="top:80%;animation-delay:15s"><img src="static/3ab9a5c0-3794-4df2-8791-d5bb9c7bb5fa.png" alt="Peixe"></div>
+
+  <div class="blood" id="blood"></div>
+  <div class="shark" id="shark"><img src="static/60726b70-0025-445b-8bf8-4f3c4c0d9a30.png" alt="tubarão"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
